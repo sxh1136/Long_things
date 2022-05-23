@@ -1,5 +1,5 @@
 # Long_things
-## Optimised guppy HAC basecalling for McSchaik WorkStation
+## Optimised guppy HAC basecalling for mcschaik workstation
 ```
 guppy_basecaller --flowcell FLO-MIN106 --kit SQK-RPB004 --recursive -x auto --input_path ~/Documents/Stan/VLP_impact/Patient_21_19-05-2022/ --save_path ~/Documents/Stan/VLP_impact/Patient_21_19-05-2022/guppy_basecalls --chunk_size 3000 --chunks_per_runner 290 --gpu_runners_per_device 4 --compress_fastq
 ```
