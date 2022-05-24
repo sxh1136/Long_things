@@ -1,11 +1,6 @@
 # Random notes for nanopore sequencing
 
 ## Guppy 6.0.1 optimised settings for RTX3080 (10GB VRAM)
-Other Specs (probably make very little difference):
-```
-AMD® Ryzen threadripper pro 3945wx 12-cores × 24 
-32GB RAM 32000Mhz
-```
 Chunk size was fixed to 3000 as accuracy score plataeus at this size.
 Flowcell = FLO-MIN106
 Kit = SQK-RPB004
