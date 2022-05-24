@@ -1,9 +1,7 @@
 # Random notes for nanopore sequencing
-## Optimised guppy HAC basecalling for mcschaik workstation
+## Guppy HAC basecalling for mcschaik workstation
 ```
-guppy_basecaller --flowcell FLO-MIN106 --kit SQK-RPB004 --recursive -x auto --input_path ~/Documents/Stan/VLP_impact/Patient_21_19-05-2022/ --save_path ~/Documents/Stan/VLP_impact/Patient_21_19-05-2022/guppy_basecalls --chunk_size 3000 --chunks_per_runner 290 --gpu_runners_per_device 4 --compress_fastq
+guppy_basecaller --device "cuda:0" --chunk_size 3000 --chunks_per_runner 768 --gpu_runners_per_device 4 --min_qscore 7 --barcode_kits SQK-RPB004 --trim_barcodes --num_barcoding_buffers 16 --flowcell FLO-MIN106 --kit SQK-RPB004 --compress_fastq --input_path Patient_21_19-05-2022/ --save_path guppy_basecalls --recursive
 ```
-Chunk size was fixed to 3000 as accuracy score plataeus at this size. Chunks_per_runner and --gpu_runners_per_device were optimised for sample/s
-samples/s: 1.08963e+07
+Chunk size was fixed to 3000 as accuracy score plataeus at this size. 
 
-Did try Super accuracy mode but it was very slow even with a RTX3080
